@@ -1,6 +1,26 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+# exclude patterns (uncomment them if you want to use them):
+# *.[oa]
+*~
+cae/cae-preview-webapp/logs/*
+studio/studio-webapp/logs/*
+.vagrant
+# idea:
+*.iml
+*.ipr
+*.iws
+.idea/
+# maven:
+target/
+overlays/
+repository/
+# eclipse:
+.classpath
+.project
+.settings/
+analyticslogsolr/
+# Logging:
+*.log
+*.out
+CoreMedia-Studio.log.*
+.DS_Store
+test-data/

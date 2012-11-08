@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:customize="http://www.coremedia.com/2007/coremedia-spring-beans-customization"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+   http://www.coremedia.com/2007/coremedia-spring-beans-customization http://www.coremedia.com/2007/coremedia-spring-beans-customization.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+  <!-- This component scan is necessary in order to let the customizer know the original nameService bean -->
+  <context:component-scan base-package="com.coremedia.architecture"/>
+  <customize:replace id="replaceNameService" bean="nameService" custom-ref="enhancedNameService"/>
+  <beans:bean id="enhancedNameService" class="com.project.spring.annotations.customize.EnhancedNameService"/>
+
+</beans:beans>
