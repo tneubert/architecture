@@ -4,7 +4,9 @@
         xmlns:beans="http://www.springframework.org/schema/beans"
         xmlns:customize="http://www.coremedia.com/2007/coremedia-spring-beans-customization"
         xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:util="http://www.springframework.org/schema/util"
         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
    http://www.coremedia.com/2007/coremedia-spring-beans-customization http://www.coremedia.com/2007/coremedia-spring-beans-customization.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
   <!-- This component scan is necessary in order to let the customizer know the original nameService bean -->
@@ -12,4 +14,10 @@
   <customize:replace id="replaceNameService" bean="nameService" custom-ref="enhancedNameService"/>
   <beans:bean id="enhancedNameService" class="com.project.spring.annotations.customize.EnhancedNameService"/>
 
+
+  <!--<customize:append id="myWishes" bean="wishList">-->
+  <!--<beans:list>-->
+  <!--<beans:value>Annotations</beans:value>-->
+  <!--</beans:list>-->
+  <!--</customize:append>-->
 </beans:beans>

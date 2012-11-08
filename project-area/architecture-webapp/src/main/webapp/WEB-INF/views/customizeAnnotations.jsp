@@ -30,6 +30,6 @@
   annotations.
 </pre>
 <jsp:include page="customizer/replaceBean.jsp"/>
-
+<jsp:include page="customizer/appendValues.jsp"/>
 </body>
 </html>

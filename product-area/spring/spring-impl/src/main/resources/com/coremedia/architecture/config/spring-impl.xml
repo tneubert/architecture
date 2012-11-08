@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+
+  <beans:bean id="wishList" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <beans:property name="sourceList">
+      <beans:list>
+        <beans:value>Icecream</beans:value>
+      </beans:list>
+    </beans:property>
+  </beans:bean>
+
+  <!--<util:list id="wishList" value-type="java.lang.String">-->
+    <!--<beans:value>ManagedBean</beans:value>-->
+    <!--<beans:value>Inject</beans:value>-->
+  <!--</util:list>-->
+</beans:beans>
